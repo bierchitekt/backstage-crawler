@@ -29,7 +29,7 @@ do
         {
           echo  "<tr>"
           echo "<td>$datum</td>"
-          echo "<td><a href=$link>$title</td>"
+          echo "<td><a href=$link>$title</a></td>"
 
           echo "<td>$genre</td>"
           echo "<td>$price</td>"
