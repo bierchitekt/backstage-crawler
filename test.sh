@@ -9,7 +9,7 @@ echo "<table>
     <th>Preis</th>
   </tr>" > result.html
 
-for page in $(seq 1 2);
+for page in $(seq 1 28);
 do
   echo "getting page number $page"
 
@@ -39,3 +39,4 @@ do
 
 done
 echo "</table>" >> result.html
+rm file.html detailpage.html
