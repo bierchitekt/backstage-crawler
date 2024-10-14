@@ -17,10 +17,10 @@ do
 
     for i in $(seq 1 10);
     do
-        title=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/strong/a") # bandname
-        link=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/strong/a/@href") # bandname
-        datum=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/h6[5]/strong[1]") # datum
-        genre=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/div[2]" | xargs | sed s/"Learn More"// |xargs) # genre
+        title=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/strong/a" | xargs)
+        link=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/strong/a/@href") 
+        datum=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/h6[5]/strong[1]")
+        genre=$($XIDEL -s file.html -e "/html/body/div[2]/main/div[2]/div[1]/div[4]/div[2]/ol/li[$i]/div/div[2]/div[2]" | xargs | sed s/"Learn More"// |xargs)
 
 
         wget -q "$link" -O detailpage.html
