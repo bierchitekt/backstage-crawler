@@ -7,9 +7,9 @@ echo "<table>
     <th>Band</th>
     <th>Genre</th>
     <th>Preis</th>
-  </tr>" > result.html
+  </tr>" > backstage-konzerte.html
 
-for page in $(seq 1 27);
+for page in $(seq 1 26);
 do
   echo "getting page number $page"
 
@@ -34,9 +34,9 @@ do
           echo "<td>$genre</td>"
           echo "<td>$price</td>"
           echo "</tr>"
-        } >> result.html
+        } >> backstage-konzerte.html
     done
 
 done
-echo "</table>" >> result.html
+echo "</table>" >> backstage-konzerte.html
 rm file.html detailpage.html
