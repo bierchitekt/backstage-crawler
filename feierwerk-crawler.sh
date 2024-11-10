@@ -11,7 +11,7 @@ echo "<table>
     <th>Details</th>
   </tr>" > "$result"
 
-wget -r -l 1 https://www.feierwerk.de/konzert-kulturprogramm/kkp
+wget2 -r -l 1 https://www.feierwerk.de/konzert-kulturprogramm/kkp
 
 cd www.feierwerk.de/konzert-kulturprogramm/ || exit 1
 
