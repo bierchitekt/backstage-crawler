@@ -21,7 +21,7 @@ find . -type f -name "*kkp*" -print0 | while IFS= read -r -d '' file; do
 #  echo "Gefundene Datei: $file"
 
  for i in $(seq 1 20); do
-  IN=$(/home/bierchitekt/bin/xidel -s $file -e  "/html/body/div[1]/div/div[1]/div/div[2]/div[7]/div[1]/div[$i]" | xargs)
+  IN=$(/home/bierchitekt/bin/xidel -s $file -e  "/html/body/div[1]/div/div[1]/div/div[2]/div[8]/div[1]/div[$i]" | xargs)
   IFS='|';
   arrIN=($IN);
   unset IFS;
